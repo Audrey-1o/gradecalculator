@@ -1,2 +1,19 @@
 # gradecalculator
 This is my first project on GitHub
+
+grades = []
+count = int(input("How many grades? "))
+
+for i in range(count):
+    grade = float(input(f"Enter grade {i+1}: "))
+    grades.append(grade)
+
+average = sum(grades) / len(grades)
+
+if average >= 75:
+    result = "PASS"
+else:
+    result = "FAIL"
+
+print("\nAverage:", round(average, 2))
+print("Result:", result)
